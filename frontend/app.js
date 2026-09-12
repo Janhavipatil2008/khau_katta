@@ -1,5 +1,5 @@
 // Point this at your deployed backend URL (e.g. https://khau-katta-api.onrender.com)
-const API_BASE = "http://localhost:8000";
+const API_BASE = "/api";
 const WS_BASE = API_BASE.replace(/^http/, "ws");
 
 let menuItems = [];
