@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khau Katta — Smart Canteen</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <h1>🍛 Khau Katta <span>खाऊ कट्टा</span></h1>
+  <div id="crowd-pill" class="pill pill-low">Low crowd</div>
+</header>
+
+<main>
+  <!-- Live canteen dashboard -->
+  <section class="dashboard" id="dashboard">
+    <div class="stat"><span id="stat-waiting">0</span><label>People waiting</label></div>
+    <div class="stat"><span id="stat-preparing">0</span><label>Preparing</label></div>
+    <div class="stat"><span id="stat-ready">0</span><label>Ready</label></div>
+    <div class="stat"><span id="stat-avgwait">0</span><label>Avg wait (min)</label></div>
+  </section>
+
+  <div class="layout">
+    <!-- Menu -->
+    <section class="menu-section">
+      <h2>Menu</h2>
+      <div id="menu-list" class="menu-grid"></div>
+    </section>
+
+    <!-- Cart + Order -->
+    <section class="cart-section">
+      <h2>Your Order</h2>
+      <input id="student-name" type="text" placeholder="Your name" />
+      <div id="cart-list" class="cart-list"></div>
+      <div class="cart-total">Total: ₹<span id="cart-total">0</span></div>
+      <button id="place-order-btn">Place Order</button>
+
+      <div id="order-result" class="order-result hidden">
+        <h3>Order Confirmed 🎉</h3>
+        <p>Token: <strong id="result-token"></strong></p>
+        <p>Status: <span id="result-status"></span></p>
+        <p>Pickup window: <span id="result-window"></span></p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
